@@ -4,6 +4,10 @@ const userInput = document.getElementById("user-input"); // Champ où l'utilisat
 const chatBox = document.getElementById("chat-box"); // Zone où s'affichent les messages
 
 // Fonction pour envoyer la question à l'API et obtenir une réponse
+// import dotenv from "dotenv";
+// import dotenv from "dotenv";
+// dotenv.config();
+// console.log(process.env.GEMINI_API_KEY);
 async function getResponse() {
   const apiKey = "AIzaSyAmzItPdnxMCDJnI8GohFnz3AS9-M6gavA"; // Remplace par ta clé API
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;

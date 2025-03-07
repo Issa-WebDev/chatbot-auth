@@ -1,14 +1,17 @@
 import mongoose from "mongoose";
-const connect = mongoose.connect("mongodb://localhost:27017/Login-tut");
+import dotenv from "dotenv";
+dotenv.config();
 
-// Check database connected or not
-connect
-  .then(() => {
-    console.log("Database Connected Successfully");
-  })
-  .catch(() => {
-    console.log("Database cannot be Connected");
-  });
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("Mongodb connected...");
+  } catch (error) {
+    console.log("Erreur", error.message);
+    process.exit(1);
+  }
+};
+connectDB();
 
 // Create Schema
 const Loginschema = new mongoose.Schema({
