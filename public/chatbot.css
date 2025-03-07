@@ -1,0 +1,128 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  position: relative;
+  width: 70%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.title {
+  width: 90%;
+  text-align: center;
+  font-size: 2rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.banner {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+#chat-box {
+  padding: 20px;
+  height: 500px;
+  overflow-y: auto;
+  color: #fff;
+}
+
+/* style depuis le js */
+.message {
+  margin-bottom: 15px;
+}
+
+.user .message-content {
+  text-align: right;
+  color: #fff;
+  background-color: #4e73df;
+  border-radius: 5px 5px 0 5px;
+  padding: 12px;
+  display: inline-block;
+  max-width: 70%;
+}
+
+.bot .message-content {
+  text-align: left;
+  color: #ffff;
+  background-color: teal;
+  border-radius: 5px 5px 5px 0;
+  padding: 12px;
+  display: inline-block;
+  max-width: 70%;
+}
+/* style depuis le js */
+
+#chat-form {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+::placeholder,
+#user-input {
+  font-size: 1.1rem;
+  color: gray;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#user-input {
+  flex: 1;
+  padding: 15px 20px;
+  background-color: #444;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#user-input:focus {
+  outline: 2px solid teal;
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  background-color: teal;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(3, 108, 108);
+}
+
+button:focus {
+  outline: 3px solid teal;
+}
